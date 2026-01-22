@@ -39,7 +39,7 @@ python main.py \
   --max_epochs 300 \
   --gpu 0 \
   --batch_size 8 \
-  --model FullMedSeg \
+  --model MedSeg \
   --base_dir ./data/busi \
   --dataset_name busi
 ```
