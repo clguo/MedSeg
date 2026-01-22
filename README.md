@@ -31,16 +31,10 @@ For **3D datasets**, including **ACDC** and **Synapse**, we follow the U-Bench c
 
 ## Quick Start
 
-### Environment Setup
 
 ```bash
 source ~/.bashrc
 source activate ubench
-```
-
-### Training (In-domain: BUSI)
-
-```bash
 python main.py \
   --max_epochs 300 \
   --gpu 0 \
