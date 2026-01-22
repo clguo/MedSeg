@@ -14,7 +14,6 @@ The initial learning rate is set to **0.01**, and all models are trained for **3
 A fixed random seed of **41** is used for all experiments.
 
 ### Loss Function
----
 
 For all **2D datasets**, we adopt a combination of **binary cross-entropy (BCE)** loss and **Dice loss**, defined as:
 
