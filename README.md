@@ -1,7 +1,7 @@
 
-# FullMedSeg
+# MedSeg
 
-This repository provides the implementation of **FullMedSeg** based on the official U-Bench framework.
+This repository provides the implementation of **MedSeg** based on the official U-Bench framework.
 
 ---
 
