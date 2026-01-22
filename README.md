@@ -1,14 +1,17 @@
+**Experimental Setup.**  
+All experiments are implemented based on the official U-Bench open-source codebase to ensure consistent training pipelines and fair comparisons.  
+Following the U-Bench protocol, all models are trained using stochastic gradient descent (SGD) with a momentum of 0.9 and a weight decay of 1×10⁻⁴.  
+The initial learning rate is set to 0.01, and all models are trained for 300 epochs with a batch size of 8.  
+A fixed random seed of 41 is used for all experiments.
 
-\noindent \textbf{Experimental Setup.}
-All experiments are implemented based on the official U-Bench open-source codebase to ensure consistent training pipelines and fair comparisons.
-Following the U-Bench protocol, all models are trained using stochastic gradient descent (SGD) with a momentum of 0.9 and a weight decay of $1\times10^{-4}$.
-The initial learning rate is set to 0.01, and all models are trained for 300 epochs with a batch size of 8.
-A fixed random seed of 41 is used for all experiments. Regarding the loss function, for all 2D datasets we adopt a combination of binary cross-entropy (BCE) loss and Dice loss, formulated as
-$
-\mathcal{L} = 0.5 \times \mathrm{BCE}(\hat{y}, y) + \mathrm{Dice}(\hat{y}, y).
-$
+Regarding the loss function, for all 2D datasets we adopt a combination of binary cross-entropy (BCE) loss and Dice loss, formulated as  
+
+\[
+\mathcal{L} = 0.5 \times \mathrm{BCE}(\hat{y}, y) + \mathrm{Dice}(\hat{y}, y)
+\]
+
 For 3D datasets, including ACDC and Synapse, we follow the U-Bench configuration and apply a weighted Dice formulation:
-$
-\mathcal{L} = 0.5 \times \mathrm{BCE}(\hat{y}, y) + 0.7 \times \mathrm{Dice}(\hat{y}, y).
-$
 
+\[
+\mathcal{L} = 0.5 \times \mathrm{BCE}(\hat{y}, y) + 0.7 \times \mathrm{Dice}(\hat{y}, y)
+\]
