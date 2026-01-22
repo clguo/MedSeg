@@ -26,9 +26,9 @@ class StdConv(nn.Module):
 
 
 # ------------------------------------
-# FullMedSeg (clean version)
+# MedSeg (clean version)
 # ------------------------------------
-class FullMedSeg(nn.Module):
+class MedSeg(nn.Module):
     def __init__(self, input_channel=3, num_classes=1, channel=32, pretrained=True):
         super().__init__()
 
@@ -164,7 +164,7 @@ class FullMedSeg(nn.Module):
 # Quick test
 # ------------------------------------
 if __name__ == "__main__":
-    model = FullMedSeg(num_classes=1)
+    model = MedSeg(num_classes=1)
     x = torch.randn(2, 3, 256, 256)
     y = model(x)
     print(y.shape)  # [2, 1, 256, 256]
